@@ -1,0 +1,109 @@
+Recursion:
+
+1. In your own words, what is recursion?
+Recursion is when a function is called on itself. A recursive function calls smaller 
+instances of itself in order to solve a problem, rather than iterating. 
+
+2. Why is it necessary to have a base case?
+A base case is the most simple solution to the problem. It lets a recursive 
+function know when it's done, so it doesn't keep recursing infinitely. 
+
+Graphs:
+
+1. What is a graph?
+A graph is a data structure similar to a tree, but which can contain loops, and 
+can be either directed or undirected. Each node in a graph is connected by an
+"edge."
+
+2. How is a graph different from a tree?
+Trees flow in one direction, whereas graphs are less restricted. Because they contain
+loops, there is no implied heirarchy. 
+
+3. Give an example of something that would be good to model with a graph.
+Finding degrees of connection on a social network, like Facebook or LinkedIn. 
+
+
+Performance of Different Data Structures:
+
+Python List - Add-L: O(n) because it will have to iterate through all of the items in the list
+and re-index them
+Python List - Pop-L: O(n) because it will have to iterate through all of the items in the list
+and re-index them
+Python List - Pop-R: O(1) because finding an item in an array by it's index is O(1), and there
+is no need to go through the rest of the list
+Linked List - Index: O(n) because indexing and searching a linked list both require walking through
+the entire list
+Linked List - Search: O(n) because indexing and searching a linked list both require walking through
+the entire list
+Linked List - Add-R: O(1) because only the tail needs to be updated
+Linked List - Add-L: O(1) because only the head needs to be updated
+Linked List - Pop-L: O(1) because only the head needs to be updated
+Linked List - Pop-R: O(n) becuse it needs to walk through the whole list to find the 
+next-to-last node and update it to be the new tail
+Doubly-Linked List - Index: O(n) because indexing and searching a DLL both require walking through
+the entire list
+Doubly-Linked List - Search: O(n) because indexing and searching a DLL both require walking through
+the entire list
+Doubly-Linked List - Add-R: O(1) because only the tail needs to be updated
+Doubly-Linked List - Add-L: O(1) because only the head needs to be updated
+Doubly-Linked List - Pop-L: O(1) because only the head needs to be updated
+Doubly-Linked List - Pop-R: O(1) because you can use the "prev" of the current tail to
+reassign the tail
+Queue (as Array) - Add-R: O(1) because the queue is acting as an array, so appending to the
+end doesn't require going through the rest of the queue 
+Queue (as Array) - Pop-L: O(n) because the rest of the items in the queue will have to
+be re-indexed
+Queue (as LL or DLL) - Add-R: O(1) because you're keeping track of the tail, so it's easy 
+to update
+Queue (as LL or DLL) - Pop-L: O(1) because you're keeping track of the head, so you can
+easily reassign it
+Stack (as Array, LL, or DLL) - Add-R: O(1) because you're just adding something new to the
+end - it's what stacks are made for. Last in first out. 
+Stack (as Array, LL, or DLL) - Pop-R: O(1) because you're removing something from
+the beginning of a stack - it's what stacks are made for. Last in first out. 
+Deque (As DLL) - Add-R: O(1) because deques are O(1) for everything except indexing
+and searching
+Deque (As DLL) - Add-L: O(1) because deques are O(1) for everything except indexing
+and searching
+Deque (As DLL) - Pop-L: O(1) because deques are O(1) for everything except indexing
+and searching
+Deque (As DLL) - Pop-R: O(1) because deques are O(1) for everything except indexing
+and searching
+
+
+Set - Get: O(1)
+Set - Add: O(1)
+Set - Delete: O(1)
+Set - Iterate: O(n)
+Set - Memory: Medium
+Binary Search Tree - Get: O(log n)
+Binary Search Tree - Add: O(log n)
+Binary Search Tree - Delete: O(log n)
+Binary Search Tree - Iterate: O(n)
+Binary Search Tree - Memory: A little
+Tree - Get: O(n)
+Tree - Add: O(1)
+Tree - Delete: O(1)
+Tree - Iterate: O(n)
+Tree - Memory: A little
+
+Sorting:
+
+1. Describe in words how the Bubble Sort algorithm works.
+Bubble sort "bubbles" the largest number up to the top. It looks at every pair
+of numbers it encounters, and swaps the larger one to the right (if necessary).
+After the first pass, the largest number in the list will be all the way to the right.
+On the next pass, it brings the second-largest number to the spot second from the
+right, etc. 
+
+2. Describe in words how the Merge Sort algorithm works.
+Merge sort takes an unsorted list and breaks it in half. Using recursion, it continues
+to break down each half until each number is in a list of its own. It then looks at the
+lists in pairs, and merges them together in sorted order. It continues to merge lists
+together until the entire original list has been merged together in the correct order.  
+
+3. Describe in words how the Quick Sort algorithm works.
+Quick Sort chooses a pivot number from the list, and moves all the numbers lower than the pivot
+to the left of the pivot number and all numbers higher than the pivot to the right. It then
+chooses a new pivot on each side to put the numbers on either side of the original pivot in 
+order, and does this until the entire list has been sorted. 
